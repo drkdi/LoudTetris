@@ -18,14 +18,16 @@ With this version of tetris, much like regular versions of tetris, users will ha
 The general layout will be a large rectangular canvas centered on the screen, with a description/controls on the right, as well as links to my github/personal site/linkedin.
 
 # Architecture and Technologies
-Javascript and HTML will serve as the base foundation for the game rendering and mechanics, and using CSS to style the page itself. An external JS library will be used to convert voice to inputs.
+* Javascript and HTML5 will serve as the base foundation for the game rendering and mechanics, and using CSS to style the page itself. 
+* Web Audio API will be used for background music and control
+* An external JS library will be used to convert voice to inputs.
 
 # Implementation Timeline
  (tentative)
 Day 1: Research and implement canvas for a properly formatted playing field
 
-Day 2: Implement block shapes and 
+Day 2: Implement block shapes and figure out actions
 
-Day 3: Research block actions and combining them with playing field
+Day 3: Figure out collisions and combining objects with playing field
 
 Day 4+: Implement voice API
