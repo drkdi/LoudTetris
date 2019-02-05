@@ -1,4 +1,5 @@
 ## LoudTetris
+*like tetris, but loud*
 
 # Background
 Loud tetris is a spinoff of the classic tetris game, where continuous falling objects of different shapes of tiles need to be arranged in a specific manner to continue.
