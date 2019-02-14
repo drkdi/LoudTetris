@@ -6,7 +6,11 @@
    <title>Loud Tetris</title>
    <link rel="stylesheet" href="./assets/css.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+   <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
    <script src="./dist/bundle.js"></script>
 </head>
 
@@ -19,23 +23,26 @@
 
 
 
-   <canvas id="tetris" width="240" height="400" style="solid #000000;"></canvas>
+   <canvas id="tetris" width="360" height="600" style="solid #000000;"></canvas>
 
-
+   <p id="currentWord" class="currentWord">All those words will be lost in time, like tears in rain</p>
+   
    <div class="directions">
-      <p>DIRECTIONS:</p>
-      <p id="left">LEFT</p>
-      <p id="right">RIGHT</p>
-      <p id="rotate">ROTATE</p>
-      <p id="drop">DROP</p>
+      <img src="./assets/keys.png" alt="keys" class="key_image">
+      <p class="directiones">DIRECTIONS:</p>
+      <p id="rotate" class="rotate">ROTATE</p>
+      <p id="left" class="left">LEFT</p>
+      <p id="right" class="right">RIGHT</p>
+      <p id="down" class="down">DOWN</p>
+      <p id="drop" class="drop">DROP</p>
    </div>
+
 
    <div class="links">
       <a href="https://github.com/drkdi?tab=repositories"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/daiderek/"><i class="fab fa-linkedin"></i></a>
       <a href="https://derekdai.com"><i class="fas fa-user-alt"></i></a>
    </div>
-
 
    <script src="./lib/tetris.js"></script>
 

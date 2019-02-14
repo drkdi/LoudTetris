@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic');
 @import url('font-awesome.min.css');
-body {
 
+/* * { border: 1px solid red; } */
+
+html { height: 100%; }
+/* cant scale with this */
+
+body {
    color: white;  
    background-image: url("https://i.imgur.com/9WgJg0G.gif");
-   background-repeat: no-repeat;
+   height: auto;
    background-size: cover;
+   /* background-repeat: no-repeat; */
+
+ 
 }
 
 canvas {
    /* grid-template-columns: repeat(10, 1fr); */
-
+   border-radius: 10px;
    margin-left: auto;
    margin-right: auto;
    display: block;
@@ -21,6 +29,8 @@ h1 {
    /* display: block;
    justify-content: center; */
      text-align: center;
+     position: relative;
+     top: 20px;
 }
 
 a {
@@ -31,7 +41,7 @@ a {
 }
 .links {
    position: absolute;
-   right: 25%;
+   left: 60%;
    top: 60%;
    padding: 5px 15px 5px 15px;
    border-radius: 10px;
@@ -39,22 +49,97 @@ a {
 }
 
 .directions {
+   font-family: 'Anton', sans-serif;
+   font-size: 20px;
+
+   /* background-color: rgb(0, 0, 0, 0.5); */
+   border-radius: 10px;
    position: absolute;
-   top: 10px;
-   font-size: 40px;
+   width: 400px;
+   height: 250px;
+   top: 15%;
+   left: 60%;
+   color: black;
 }
+
+.directiones {
+   position: absolute;
+   left: 40%;
+   top: -5%;
+}
+
+.rotate {
+   position: absolute;
+   top: 15%;
+   left: 45%;
+}
+
+.left {
+   position: absolute;
+   top: 40%;
+   left: 25%;
+}
+.right {
+   position: absolute;
+   top: 40%;
+   left: 75%;
+}
+.down {
+   position: absolute;
+   top: 40%;
+   left: 45%;
+}
+
+.drop {
+   position: absolute;
+   text-align: center;
+   top: 60%;
+   left: 37%;
+   background-color: green;
+   width: 100px;
+}
+
+.key_image {
+   width: 500px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+}
+
+.currentWord {
+   font-family: 'Advent Pro', sans-serif;
+font-size: 40px;
+   position: absolute;
+   top: 83%;
+   left: 35%;
+}
+
+.monologue {
+font-family: 'Advent Pro', sans-serif;
+font-size: 20px;
+   position: absolute;
+   top: 90%;
+   left: 36%;
+}
+
+
 
 
 .rainbow {
-  font-size:42.0px;
-  font-family: 'BookmanStd-bold';
+   color: rgb(255, 255, 255, 0.8);
+  font-size:50px;
+   font-family: 'Bungee Shade', cursive;
 }
+
 .rainbow:hover {
 -webkit-animation:rainbow 1s infinite;
 -ms-animation:rainbow 1s infinite;
 -o-animation:rainbow 1s infinite;
 animation:rainbow 1s infinite;
 }
+
+
+
 @-webkit-keyframes rainbow {
 0% {color: #ff0000;}
 10% {color: #ff8000;}
