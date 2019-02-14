@@ -5,11 +5,39 @@
    <meta charset="utf-8">
    <title>Loud Tetris</title>
    <link rel="stylesheet" href="./assets/css.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
    <script src="./dist/bundle.js"></script>
 </head>
 
 <body>
-   <canvas id="canvas"></canvas>
+
+
+   <h1 class="rainbow">LOUD TETRIS</h1>
+
+
+
+
+
+   <canvas id="tetris" width="240" height="400" style="solid #000000;"></canvas>
+
+
+   <div class="directions">
+      <p>DIRECTIONS:</p>
+      <p id="left">LEFT</p>
+      <p id="right">RIGHT</p>
+      <p id="rotate">ROTATE</p>
+      <p id="drop">DROP</p>
+   </div>
+
+   <div class="links">
+      <a href="https://github.com/drkdi?tab=repositories"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/daiderek/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://derekdai.com"><i class="fas fa-user-alt"></i></a>
+   </div>
+
+
+   <script src="./lib/tetris.js"></script>
 
 </body>
 
