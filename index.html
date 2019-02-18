@@ -22,18 +22,23 @@
 
 
 
-
-   <canvas id="tetris" width="360" height="600" style="solid #000000;"></canvas>
-
-   <p id="currentWord" class="currentWord">All those words will be lost in time, like tears in rain</p>
    
+   <canvas id="canvas" width="360" height="600" style="solid #000000;"></canvas>
+
+   <div class="currentWordDiv">
+      <p id="currentWord" class="currentWord">All those words will be lost in time, like tears in rain</p>
+   </div>
+
    <div class="directions">
-      <img src="./assets/keys.png" alt="keys" class="key_image">
+      <!-- <img src="./assets/keys.png" alt="keys" class="key_image"> -->
       <p class="directiones">DIRECTIONS:</p>
-      <p id="rotate" class="rotate">ROTATE</p>
-      <p id="left" class="left">LEFT</p>
-      <p id="right" class="right">RIGHT</p>
-      <p id="down" class="down">DOWN</p>
+
+      <div class="arrow_keys">
+         <p id="rotate" class="rotate">ROTATE</p>
+         <p id="left" class="left">LEFT</p>
+         <p id="right" class="right">RIGHT</p>
+         <p id="down" class="down">DOWN</p>
+      </div>
       <p id="drop" class="drop">DROP</p>
    </div>
 
@@ -44,7 +49,7 @@
       <a href="https://derekdai.com"><i class="fas fa-user-alt"></i></a>
    </div>
 
-   <script src="./lib/tetris.js"></script>
+   <script src="./lib/combine.js"></script>
 
    <!-- <button onclick="openIt()">preview</button>
    <script>
@@ -54,7 +59,8 @@
    </script> -->
 
 
-   
+   <!-- <img src="./assets/md_monster.gif" alt="monster gif"> -->
+   <img src="./assets/chiken.gif" alt="gif">
 
 </body>
 

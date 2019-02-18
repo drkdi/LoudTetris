@@ -31,6 +31,7 @@ h1 {
      text-align: center;
      position: relative;
      top: 20px;
+     
 }
 
 a {
@@ -40,83 +41,133 @@ a {
    padding-right: 5px;
 }
 .links {
+   opacity: 0.8;
    position: absolute;
-   left: 60%;
-   top: 60%;
+   left: 3.8%;
+   top: 2%;
    padding: 5px 15px 5px 15px;
    border-radius: 10px;
-   background-color: rgb(0, 0, 0, 0.7);
+   transform: rotate(2.7)deg);
+   /* background-color: rgb(0, 0, 0, 0.7); */
+}
+.links a {
+   display: block;
 }
 
 .directions {
    font-family: 'Anton', sans-serif;
    font-size: 20px;
-
-   /* background-color: rgb(0, 0, 0, 0.5); */
+   /* transform: rotate(1deg); */
+   /* background-color: rgba(219,255,255,1); */
    border-radius: 10px;
    position: absolute;
    width: 400px;
-   height: 250px;
-   top: 15%;
-   left: 60%;
-   color: black;
+   height: 300px;
+   top: 5%;
+   left: 71.5%;
 }
 
-.directiones {
-   position: absolute;
-   left: 40%;
-   top: -5%;
+/* .directiones {
+position: absolute;
+left: 10%;
+top: -5%;
+} */
+.arrow_keys {
+justify-content: space-between;
 }
+
 
 .rotate {
+  
    position: absolute;
-   top: 15%;
-   left: 45%;
+   top: 0%;
+   left: 42%;
+
+   color: black;
+   padding: 30px 15px 30px 15px;
+   border-radius: 10px;
+   background: white;
+   box-shadow: 5px 5px;
 }
 
 .left {
    position: absolute;
    top: 40%;
    left: 25%;
+
+     color: black;
+   padding: 30px 15px 30px 15px;
+   border-radius: 10px;
+   background: white;
+   box-shadow: 5px 5px;
 }
 .right {
    position: absolute;
    top: 40%;
    left: 75%;
+
+     color: black;
+   padding: 30px 15px 30px 15px;
+   border-radius: 10px;
+   background: white;
+   box-shadow: 5px 5px;
 }
 .down {
    position: absolute;
    top: 40%;
    left: 45%;
+
+     color: black;
+   padding: 30px 15px 30px 15px;
+   border-radius: 10px;
+   background: white;
+   box-shadow: 5px 5px;
 }
 
 .drop {
+   color:black;
    position: absolute;
    text-align: center;
-   top: 60%;
-   left: 37%;
-   background-color: green;
-   width: 100px;
+   top: 80%;
+   left: 10%;
+   padding: 10px 150px 10px 150px;
+      border-radius: 10px;
+      box-shadow: 5px 5px;
+
+
+   background-color: white;
 }
 
 .key_image {
    width: 500px;
    position: absolute;
-   top: 0px;
+   top: -50px;
    left: 0px;
 }
 
-.currentWord {
-   font-family: 'Advent Pro', sans-serif;
-font-size: 40px;
+.currentWordDiv {
    position: absolute;
-   top: 83%;
-   left: 35%;
+   width: 1000px;
+   height: 100px;
+   position: absolute;
+   vertical-align: middle;   
+   top: 85%;
+   left: 15%;
+   /* background-color: rgb(1, 1, 1, 0.3); */
+}
+
+.currentWord {
+   opacity: 1.0;
+   color: white;
+   text-align: center;
+   font-family: 'Advent Pro', sans-serif;
+   font-size: 40px;
+   text-shadow: 2px 2px 4px #000000;   
 }
 
 .monologue {
 font-family: 'Advent Pro', sans-serif;
-font-size: 20px;
+font-size: 40px;
    position: absolute;
    top: 90%;
    left: 36%;
