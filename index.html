@@ -25,23 +25,34 @@
    
    <canvas id="canvas" width="360" height="600" style="solid #000000;"></canvas>
 
+   
    <div class="currentWordDiv">
       <p id="currentWord" class="currentWord">All those words will be lost in time, like tears in rain</p>
    </div>
 
    <div class="directions">
       <!-- <img src="./assets/keys.png" alt="keys" class="key_image"> -->
-      <p class="instructions">speak or use keyboard</p>
-      <p class="directiones"><i class="fas fa-microphone"></i></p>
-      <p class="directiones2"><i class="fas fa-keyboard"></i></p>
-      <p id="rotate" class="rotate">ROTATE</p>
+      <p class="instructions"><i class="fas fa-microphone"></i><i class="fas fa-keyboard"></i><i class="fas fa-mouse-pointer"></i></p>
+      <!-- <p class="directiones2"><i class="fas fa-keyboard"></i></p>
+      <button class="directiones"><i class="fas fa-microphone"></i></button>
+      -->
+     
+     
+     
+      <!-- <p id="rotate" class="rotate">ROTATE</p> -->
+         <p><button onclick="rotate()" id="rotate" class="rotate">ROTATE</button></p>
 
       <div class="arrow_keys">
-         <p id="left" class="left">LEFT</p>
-         <p id="down" class="down">DOWN</p>
-         <p id="right" class="right">RIGHT</p>
+         <!-- <p id="left" class="left">LEFT</p> -->
+         <!-- <p id="down" class="down">DOWN</p>
+         <p id="right" class="right">RIGHT</p> -->
+         <p><button onclick="playerMove(-1)"id="left" class="left">LEFT</button></p>
+         <p><button onclick="down()"id="down" class="down">DOWN</button></p>
+         <p><button onclick="playerMove(1)"id="right" class="right">RIGHT</button></p>
       </div>
-      <p id="drop" class="drop">DROP</p>
+      <!-- <p id="drop" class="drop">DROP</p> -->
+         <p><button onclick="drop()" id="drop" class="drop">DROP</button></p>
+
    </div>
 
 
