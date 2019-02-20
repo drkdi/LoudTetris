@@ -219,9 +219,8 @@ top: 40%;
    text-align: center;
    position: relative; 
    left: 50%;
-
    transform: translateX(-50%);
-
+   bottom: 30px;
    /* top: 85%;
    left: 15%; */
    /* background-color: rgb(1, 1, 1, 0.3); */
