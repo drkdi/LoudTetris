@@ -71,13 +71,13 @@ a {
 
 .instructions {
    color: white;
-   font-size: 50px;
+   font-size: 20px;
    position: absolute;
-   top: -10%;
-   left: 7%;
+   top: 0%;
+   left: 6%;
    width: 300px;
-   display: inline-flex;
-   justify-content: space-between;
+   /* display: inline-flex;
+   justify-content: space-between; */
 }
 
 .directiones {
