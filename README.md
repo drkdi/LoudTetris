@@ -1,50 +1,66 @@
-### Hungr
+## LoudTetris
+*like tetris, but loud*
 
-[Live Link](https://hung3r.herokuapp.com/#/)
+# Background
+Loud tetris is a spinoff of the classic tetris game, where continuous falling objects of different shapes need to be arranged in a specific manner to clear the line
+The twist is that, as a possible input, the pieces can be controlled voice commands (in addition to keyboard and mouse commands).
 
-Hungr is a food blogging site, inspired by Tumblr. Users can sign up, make different types of posts(text, image, media, etc), and have an index of all of their posts and of their followed users.
-It was built using a Rails backend, and React / Redux frontend, PostgreSQL database, with AWS to host different types of media.
+# Functionality & MVP
+With this version of tetris, much like regular versions of tetris, users will have to:
 
-# Auth
-Front end and back end auth is baked into the core of the app, preventing unauthorized access based on valid credentials. A switch is used to redirect the user from a splash page to either a login or signup page, rendered using React.
+* Have a blank canvas upon loading
+* Start the game by pressing a key
+* Have the blocks automatically drop, and move them left and right
+* Be able to rotate the blocks
+* As a bonus, the ability to only have input voice commands in place of the left and right
+
+# Sample image
+![gif](assets/readme/tetrisGIF.gif)
+
+
+# Sample Code
+
+ Using the following code, the object created by the WebSpeechAPI is parsed and converted into a string for a command.
+```js
+   for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+      let transcript = event.results[i][0].transcript;
+      if ( event.results[i].isFinal === false) {
+         event.results[i][0].transcript = "";
+         transcript = transcript.split(" ");
+         transcript.forEach( function(word) {
+            words.push(word.toLowerCase());
+            words = words.map(str => str.replace(/\s/g, '')).filter(function (word) { return word; });
+            words = Array.from(new Set(words));
+         })
+      }
+   }
+```
+
+Having to use the intermittent results because the full result takes too long to return, sometimes the same result (e.g. "left) is returned twice, thus, by using a throttle all those interpolations are allowed to be compiled and parsed, preserving the original function.
 
 ```js
-<from app.jsx>
-      <ProtectedRoute path="/" component={NavContainer} />
-      <Switch>
-            <ProtectedRoute path="/dashboard" component={Dashboard} />
-            <ProtectedRoute path="/profile" component={Profile} />
-            <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute path="/" component={SplashContainer} />
-      </Switch>
+ recognition.onresult = throttle(function (event) {
+   parseSpeech(event);
+}, 1000);
 ```
-![splash_page](app/assets/images/splash_page.png)
+ 
 
 
 
-## Features
+# Wireframes
+The general layout will be a large rectangular canvas centered on the screen, with a description/controls on the right, as well as links to my github/personal site/linkedin.
 
-#Dashboard
-The user's dashboard has both posts that they made, as well as posts of the people they're following. It's populated by querying the database. They can choose to either edit or delete posts - but only their own.
+# Architecture and Technologies
+* Javascript and HTML5 will serve as the base foundation for the game rendering and mechanics, and using CSS to style the page itself. 
+* Web Audio API will be used for background music and control
+* An external JS library will be used to convert voice to inputs.
 
-![dashboard image](app/assets/images/dashboard.png)
+# Implementation Timeline
+ (tentative)
+Day 1: Research and implement canvas for a properly formatted playing field
 
-#Dashboard Nav
-Posts are created using different buttons, implementing React to edit the front end state to accomodate the brought up associated form. A preview is then generated.
+Day 2: Implement block shapes and figure out actions
 
-![dashboard image](app/assets/images/dashboard_nav.png)
+Day 3: Figure out collisions and combining objects with playing field
 
-![image_form](app/assets/images/image_form.png)
-
-![preview](app/assets/images/preview.png)
-
-#Profile
-The user's profile is rendered to show their personal posts, generated using a custom database query.
-
-```rb
-<from posts_controller.rb>
- def user_posts
-      @posts = Post.all.where(author_id: current_user.id)
-   end 
-```
-
+Day 4+: Implement voice API
