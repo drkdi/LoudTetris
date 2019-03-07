@@ -44,7 +44,7 @@ a {
 .links {
    opacity: 0.8;
    position: absolute;
-   left: 3.8%;
+   left: 4%;
    top: 2%;
    padding: 5px 15px 5px 15px;
    border-radius: 10px;
@@ -72,13 +72,23 @@ a {
 
 .instructions {
    color: white;
-   font-size: 22px;
-   position: absolute;
-   top: 0%;
-   left: 2%;
+   font-size: 19px;
+   position: relative;
+   top: -10px;
+   /* position: absolute;
+   top: 0%; */
+   /* left: 2%; */
    /* width: 300px; */
    /* display: inline-flex;
    justify-content: space-between; */
+}
+.instructions2 {
+   font-size: 12px;
+   position: relative;
+   top: -22px;
+      font-family: 'Advent Pro', sans-serif;
+      letter-spacing: 2px;
+
 }
 
 .directiones {
