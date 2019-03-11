@@ -255,10 +255,46 @@ font-size: 40px;
 }
 
 
+.blinking1{
+
+    animation:blinkingText 3s infinite;
+}
+.blinking2{
+   animation-delay: 1s;
+   -moz-animation-delay: 1s; /* Firefox */
+   -webkit-animation-delay: 1s; /* Safari and Chrome */
+   -o-animation-delay: 1s; /* Opera */
+
+    animation:blinkingText 3s infinite;
+}
+.blinking3{
+   animation-delay: 2s;
+   -moz-animation-delay: 2s; /* Firefox */
+   -webkit-animation-delay: 2s; /* Safari and Chrome */
+   -o-animation-delay: 2s; /* Opera */
+    animation:blinkingText 3s infinite;
+}
+@keyframes blinkingText{
+   opacity: 0.8;
+    0%{         -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: white;    }
+    49%{        -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: transparent; }
+       opacity: 0.8;
+    50%{     -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: white; }
+    99%{     -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: transparent;  }
+       opacity: 0.8;
+
+    100%{       -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: white;    }
+}
 
 
 
 .rainbow {
+   
    color: rgb(255, 255, 255, 0.8);
   font-size:50px;
    font-family: 'Bungee Shade', cursive;
@@ -270,6 +306,52 @@ font-size: 40px;
 -o-animation:rainbow 1s infinite;
 animation:rainbow 1s infinite;
 }
+
+.twoSecPopup {
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;            
+   -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+   }
+
+   @-webkit-keyframes fadeInUp {
+      from {
+         opacity: 0;
+         -webkit-transform: translate3d(0, 100%, 0);
+         transform: translate3d(0, 100%, 0);
+      }
+
+      to {
+         opacity: 1;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+}
+
+@keyframes fadeInUp {
+   
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
 
 
 
