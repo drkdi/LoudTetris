@@ -1,18 +1,15 @@
 ## LoudTetris
+
+## [Live Link](https://hung3r.herokuapp.com/#/) 
+
+
 *like tetris, but loud*
+
+
 
 # Background
 Loud tetris is a spinoff of the classic tetris game, where continuous falling objects of different shapes need to be arranged in a specific manner to clear the line
 The twist is that, as a possible input, the pieces can be controlled voice commands (in addition to keyboard and mouse commands).
-
-# Functionality & MVP
-With this version of tetris, much like regular versions of tetris, users will have to:
-
-* Have a blank canvas upon loading
-* Start the game by pressing a key
-* Have the blocks automatically drop, and move them left and right
-* Be able to rotate the blocks
-* As a bonus, the ability to only have input voice commands in place of the left and right
 
 # Sample image
 ![gif](assets/readme/tetrisGIF.gif)
@@ -24,7 +21,7 @@ With this version of tetris, much like regular versions of tetris, users will ha
 ```js
    for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
       let transcript = event.results[i][0].transcript;
-      if ( event.results[i].isFinal === false) {
+      if (event.results[i].isFinal === false) {
          event.results[i][0].transcript = "";
          transcript = transcript.split(" ");
          transcript.forEach( function(word) {
@@ -36,7 +33,7 @@ With this version of tetris, much like regular versions of tetris, users will ha
    }
 ```
 
-Having to use the intermittent results because the full result takes too long to return, sometimes the same result (e.g. "left) is returned twice, thus, by using a throttle all those interpolations are allowed to be compiled and parsed, preserving the original function.
+Having to use the intermittent results because the full result takes too long to return, sometimes the same result (e.g. "left") is returned twice, thus, by using a throttle all those interpolations are allowed to be received and parsed correctly, preserving the original function.
 
 ```js
  recognition.onresult = throttle(function (event) {
@@ -44,23 +41,6 @@ Having to use the intermittent results because the full result takes too long to
 }, 1000);
 ```
  
-
-
-
-# Wireframes
-The general layout will be a large rectangular canvas centered on the screen, with a description/controls on the right, as well as links to my github/personal site/linkedin.
-
 # Architecture and Technologies
-* Javascript and HTML5 will serve as the base foundation for the game rendering and mechanics, and using CSS to style the page itself. 
-* Web Audio API will be used for background music and control
-* An external JS library will be used to convert voice to inputs.
-
-# Implementation Timeline
- (tentative)
-Day 1: Research and implement canvas for a properly formatted playing field
-
-Day 2: Implement block shapes and figure out actions
-
-Day 3: Figure out collisions and combining objects with playing field
-
-Day 4+: Implement voice API
+* Javascript and HTML5 serves as the base foundation for the game rendering and mechanics, and CSS3 styles the page itself. 
+* Web Speech API is used for the voice to input controls
