@@ -56,6 +56,24 @@ a {
    display: block;
 }
 
+
+
+
+.fa-github {
+   color: black;
+}
+
+.fa-linkedin {
+   color: #0076b5;
+}
+
+.face {
+   width: 50px;
+   position: relative;
+   left: -5px;
+}
+
+
 .directions {
    font-family: 'Anton', sans-serif;
    font-size: 20px;
@@ -275,26 +293,28 @@ font-size: 40px;
 }
 @keyframes blinkingText{
    opacity: 0.8;
-    0%{         -webkit-text-stroke-width: 10px;
+    0%{         -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: white;    }
-    49%{        -webkit-text-stroke-width: 10px;
+    49%{        -webkit-text-stroke-width: 20px;
     -webkit-text-stroke-color: transparent; }
        opacity: 0.8;
-    50%{     -webkit-text-stroke-width: 10px;
+    50%{     -webkit-text-stroke-width: 20px;
     -webkit-text-stroke-color: white; }
-    99%{     -webkit-text-stroke-width: 10px;
+    99%{     -webkit-text-stroke-width: 20px;
     -webkit-text-stroke-color: transparent;  }
        opacity: 0.8;
 
-    100%{       -webkit-text-stroke-width: 10px;
+    100%{       -webkit-text-stroke-width: 20px;
     -webkit-text-stroke-color: white;    }
 }
 
 
+.transparent {
+      color: rgb(255, 255, 255, 0.8);
+}
 
 .rainbow {
    
-   color: rgb(255, 255, 255, 0.8);
   font-size:50px;
    font-family: 'Bungee Shade', cursive;
 }
