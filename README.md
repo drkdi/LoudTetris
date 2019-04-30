@@ -1,6 +1,6 @@
 ## LoudTetris
 
-## [Live Link](https://hung3r.herokuapp.com/#/) 
+## [Live Link](https://derekdai.com/LoudTetris/) 
 
 
 *like tetris, but loud*
