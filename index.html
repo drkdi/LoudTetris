@@ -4,133 +4,76 @@
 <head>
    <meta charset="utf-8">
    <title>Loud Tetris</title>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139075523-1"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-139075523-1');
-   </script>
-
    <link rel="stylesheet" href="./assets/css.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
    <script src="./dist/bundle.js"></script>
 </head>
-
 <body>
-
-
-   
    <!-- The Modal -->
    <div id="myModal" class="modal">
-   
       <!-- Modal content -->
       <div class="modal-content fade-in slide-out-blurred-top" id="modal-content">
          <h1 class="haveityourway">Have It Your Way</h1>
-   
-         <h2><i class="fas fa-microphone-alt"></i>
+         <h2>
+            <i class="fas fa-microphone-alt"></i>
             Enable microphone access and speak loudly and clearly into the microphone with your command
             <br/>
             (ex. say "left" and your current word will be change on the bottom, and piece will move)
          </h2>
-                  <br />
             <br />
-
-         <h2><i class="fas fa-keyboard"></i>
+            <br />
+         <h2>
+            <i class="fas fa-keyboard"></i>
             Use your keyboard keys to choose the directions, controls are shown on the right 
             <br />
-
             (ex. press <i class="far fa-caret-square-left"></i>)
          </h2>
             <br />
             <br />
-
-         <h2><i class="fas fa-mouse-pointer"></i>
+         <h2>
+            <i class="fas fa-mouse-pointer"></i>
             Click on the controls to the right
             <br />
             (ex. click on the "left" <i class="far fa-caret-square-left"></i>)
          </h2>
             <br />
-
          <p class="clicktocontinue"> click anywhere to start</p>
-       
       </div>
-   
    </div>
 
 
    <h1 class="rainbow transparent " id="flash_this">LOUD TETRIS</h1>
-
-
-
-
-   
    <canvas id="canvas" width="360" height="600" ></canvas>
 
-   
    <div class="currentWordDiv">
       <p id="currentWord" class="currentWord">All those words will be lost in time, like tears in rain</p>
-      <!-- <p id="currentWord" class="currentWord twoSecPopup fadeInUp">All those words will be lost in time, like tears in rain</p> -->
    </div>
 
    <div id="directionz" class="directions twoSecPopup fadeInUp">
-         <!-- <p class="instructions">Enable your microphone, and speak loudly</p>
-         <p class="instructions2">your piece will move in the direction stated</p>
-
-         <p class="instructions2"> (OR use keyboard arrows OR click on arrows below)</p>
-         <p class="instructions2"> note: please use Google Chrome for compatibility</p> -->
-
-      <!-- <p class="instructions"><i class="fas fa-microphone"></i><i class="fas fa-keyboard"></i><i class="fas fa-mouse-pointer"></i></p> -->
-
       <button id="myBtn" class="openModal rainbow"><i class="far fa-question-circle bounce-in-top"></i></button>
-
-     
-     
-      <!-- <p id="rotate" class="rotate">ROTATE</p> -->
-         <p><button onclick="rotate()" id="rotate" class="rotate">ROTATE</button></p>
-
+      <p><button onclick="rotate()" id="rotate" class="rotate">ROTATE</button></p>
       <div class="arrow_keys">
-         <!-- <p id="left" class="left">LEFT</p> -->
-         <!-- <p id="down" class="down">DOWN</p>
-         <p id="right" class="right">RIGHT</p> -->
          <p><button onclick="playerMove(-1)"id="left" class="left">LEFT</button></p>
          <p><button onclick="down()"id="down" class="down">DOWN</button></p>
          <p><button onclick="playerMove(1)"id="right" class="right">RIGHT</button></p>
       </div>
-      <!-- <p id="drop" class="drop">DROP</p> -->
          <p><button onclick="drop()" id="drop" class="drop">DROP</button></p>
-
    </div>
-
 
    <div class="links icons">
       <a href="https://github.com/drkdi?tab=repositories"><i class=" fab fa-github blinking1 icons roll-in-top" ></i></a>
       <a href="https://www.linkedin.com/in/daiderek/"><i class="icons fab fa-linkedin rainbow blinking2 icons roll-in-left"></i></a>
       <a href="https://derekdai.com">
-         <!-- <i class="fas fa-user-circle blinking3"></i> -->
          <img src="./assets/face.png" class=" face blinking3 icons roll-in-bottom" alt="face">
       </a>
    </div>
 
    <script src="./lib/combine.js"></script>
-
-   <!-- <button onclick="openIt()">preview</button>
-   <script>
-   function openIt(){
-      window.location.replace("https://www.youtube.com/watch?v=RVx90rTJIzc");
-    }
-   </script> -->
-
-
    <img src="./assets/chiken.gif" alt="gif">
    <img src="./assets/md_monster.gif" alt="monster gif">
 
 </body>
-
 </html>
